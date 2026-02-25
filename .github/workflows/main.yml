@@ -1,4 +1,4 @@
-name: Daily Weather Line Notice
+name: News-Summary-Gemini-Python
 
 on:
   schedule:
@@ -16,7 +16,7 @@ jobs:
           python-version: '3.10'
       - name: Install dependencies
         run: |
-          pip install requests python-dotenv
+          pip install -r .\requirements.txt
       - name: Run script
         env:
           LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
